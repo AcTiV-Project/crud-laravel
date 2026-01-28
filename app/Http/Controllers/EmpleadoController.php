@@ -13,31 +13,9 @@ class EmpleadoController extends Controller
         return view('empleados.index', compact('empleados'));
     }
 
-    public function create()
-    {
-        return view('empleados.create');
-    }
-
     public function store(Request $request)
     {
         Empleado::create($request->all());
-        return redirect()->route('empleados.index');
-    }
-
-    public function edit(Empleado $empleado)
-    {
-        return view('empleados.edit', compact('empleado'));
-    }
-
-    public function update(Request $request, Empleado $empleado)
-    {
-        $empleado->update($request->all());
-        return redirect()->route('empleados.index');
-    }
-
-    public function destroy(Empleado $empleado)
-    {
-        $empleado->delete();
-        return redirect()->route('empleados.index');
+        return redirect('/empleados');
     }
 }
