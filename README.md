@@ -20,5 +20,9 @@ Permite crear, ver, editar y eliminar empleados de manera sencilla.
 ## URL
 - http://127.0.0.1:8000/empleados
 
+## Vista previa
+
+![Imagen](image/home.png)
+
 ```bash
 composer install
